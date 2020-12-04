@@ -1,0 +1,26 @@
+{
+  "name": "notchup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
+  },
+  "author": "Aditya R Rudra",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.800.0",
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "lodash": "^4.17.20",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.16",
+    "path": "^0.12.7"
+  }
+}
