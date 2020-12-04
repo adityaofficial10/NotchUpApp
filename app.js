@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const express = require('express');
 const cors = require('cors');
@@ -175,7 +176,7 @@ app.post("/", function(req, res) {
   });
 
   //timeSlots = timeSlots.filter((value, index) => timeSlots.indexOf(value) === index);
-  if(!timeSlots.length){
+  if(timeSlots.length){
     res.render("courses", {
       courseName: req.body.courseName,
       parentName: req.body.parentName,
@@ -195,6 +196,7 @@ app.post("/success", function(req, res) {
   res.render("success");
 });
 
+const port = process.env.PORT||3000;
 var slots;
 var crs;
 getCourses().then((courses) => {
@@ -208,7 +210,7 @@ getCourses().then((courses) => {
   console.error(error);
 }).finally(() => {
 
-  app.listen(3000, function(res) {
+  app.listen(port, function(res) {
 
     console.log("Server running on port 3000...");
   });
