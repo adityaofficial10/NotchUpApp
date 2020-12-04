@@ -2,7 +2,7 @@
 
 Temporarily hosted at https://notchup-web-app.herokuapp.com/
 
-## Setup Instruction
+## Setup Instructions:
 
 1. Clone this repository on your command line using git clone.
 2. Check if you have node and npm installed,if note please install node on your system.
