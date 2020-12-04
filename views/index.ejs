@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+
+<div class="mainform" onload="myfunction()">
+  <div class="formcontent">
+    <form action="/" method="POST">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Parent's Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name" name="parentName" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Parent's Contact Number</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your contact number" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your contact number with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Parent's EmailID</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="recieverEmail" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Child's Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter child's name" name="studentName" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Child's Age</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter child's age" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Course Name</label>
+        <select id="crss" class="form-control" name="courseName" contenteditable="false" required>
+          <% crs.forEach((course)=>{ %>
+          <option> <%=course%> </option>
+          <% }); %>
+        </select>
+      </div>
+      <div class="submitbtn">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
